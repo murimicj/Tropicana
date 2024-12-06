@@ -23,5 +23,15 @@ urlpatterns = [
     path('service/', views.service, name='service'),
     path('starter/', views.starter, name='starter'),
     path('portfolio/', views.portfolio, name='portfolio'),
-
+    path('uploadimage/', views.upload_image, name='upload'),
+    path('showimage/', views.show_image, name='image'),
+    path('imagedelete/<int:id>', views.imagedelete),
+    path('job-advert/', views.job_advert_form, name='job_advert_form'),
+    path('recruitment/', views.recruitment_view, name='recruitment'),
+    path('recruitment/thank-you/', views.thank_you_view, name='recruitment_thank_you'),
+    path('admin/dashboard/', views.admin_dashboard, name='admin_dashboard'),
+    path('admin/login/', views.admin_login, name='admin_login'),
+    path('post-job/', views.post_job, name='post_job'),  # Admin can post new jobs
+    path('jobs/', views.job_list, name='job_list'),  # Users can view jobs
+    path('jobs/<int:job_id>/apply/', views.apply_for_job, name='apply_for_job'),  # Users apply for jobs
 ]

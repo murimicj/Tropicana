@@ -1,0 +1,86 @@
+{% extends 'starter-page.html' %}
+{% load static widget_tweaks %}
+{% load static %}
+{% block body %}
+
+    <!-- templates/apply_for_job.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #106eea;
+            border-color: #106eea;
+            color: white;
+        }
+        .form-label {
+            color: #106eea;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <h2 class="text-center" style="color: #106eea;">Apply for Job</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="full_name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="full_name" name="full_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_number" class="form-label">ID Number/Passport Number</label>
+                        <input type="text" class="form-control" id="id_number" name="id_number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cv" class="form-label">Upload CV</label>
+                        <input type="file" class="form-control" id="cv" name="cv" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="identification_document" class="form-label">Upload ID/Identification Document</label>
+                        <input type="file" class="form-control" id="identification_document" name="identification_document" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" name="age" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Why should you be considered for this role?</label>
+                        <textarea class="form-control" id="reason" name="reason" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary w-100">Submit Application</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,111 @@
+{% extends 'starter-page.html' %}
+{% load static widget_tweaks %}
+{% load static %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Advert Form</title>
+    <!-- Link to your locally downloaded Bootstrap file -->
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background for a professional look */
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h1 {
+            color: #106eea;
+        }
+        .form-control, .form-check-input {
+            border-color: #106eea;
+        }
+        .btn-primary {
+            background-color: #106eea;
+            border-color: #106eea;
+        }
+        .btn-primary:hover {
+            background-color: #0b57c3;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Job Advert Form</h1>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.first_name.label_tag }}
+                    {{ form.first_name|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    {{ form.last_name.label_tag }}
+                    {{ form.last_name|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    {{ form.email.label_tag }}
+                    {{ form.email|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    {{ form.mobile_phone.label_tag }}
+                    {{ form.mobile_phone|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    {{ form.organization_name.label_tag }}
+                    {{ form.organization_name|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    {{ form.title.label_tag }}
+                    {{ form.title|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    {{ form.job_title.label_tag }}
+                    {{ form.job_title|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <p>{{ form.has_job_description.label_tag }}</p>
+                    {{ form.has_job_description }}
+                </div>
+                <div class="form-group">
+                    {{ form.job_description_file.label_tag }}
+                    {{ form.job_description_file|add_class:"form-control" }}
+                </div>
+                <div class="form-group">
+                    <p>{{ form.preferred_service.label_tag }}</p>
+                    {{ form.preferred_service }}
+                </div>
+                <div class="form-group">
+                    <p>{{ form.payment_option.label_tag }}</p>
+                    {{ form.payment_option }}
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-100">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Link to your locally downloaded Bootstrap JS file -->
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+{% endblock %}

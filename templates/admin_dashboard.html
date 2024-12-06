@@ -1,0 +1,83 @@
+{% extends 'starter-page.html' %}
+{% load static widget_tweaks %}
+{% load static %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <style>
+        .dashboard-header {
+            background-color: #106eea;
+            color: white;
+            padding: 20px;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <div class="dashboard-header">
+        <h2>Admin Dashboard</h2>
+    </div>
+
+    <!-- Job Advertisements Section -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Job Advertisements</h4>
+        </div>
+        <div class="card-body">
+            <ul>
+                {% for job in job_adverts %}
+                    <li>{{ job.first_name }} {{ job.last_name }} - {{ job.job_title }} ({{ job.organization_name }})</li>
+                {% empty %}
+                    <li>No job advertisements available.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Recruitment Inquiries Section -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Recruitment Inquiries</h4>
+        </div>
+        <div class="card-body">
+            <ul>
+                {% for inquiry in recruitment_inquiries %}
+                    <li>{{ inquiry.first_name }} {{ inquiry.last_name }} - {{ inquiry.organization_name }} ({{ inquiry.status }})</li>
+                {% empty %}
+                    <li>No inquiries received.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Image Uploads Section -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Uploaded Images</h4>
+        </div>
+        <div class="card-body">
+            <ul>
+                {% for image in images %}
+                    <li><img src="{{ image.image.url }}" alt="{{ image.title }}" style="width: 100px; height: auto;"> - {{ image.title }} ({{ image.price }})</li>
+                {% empty %}
+                    <li>No images uploaded.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'starter-page.html' %}
+{% load static widget_tweaks %}
+{% load static %}
+{% block body %}
+
+  <!-- templates/job_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Available Jobs</h2>
+    <ul class="list-group">
+        {% for job in jobs %}
+            <li class="list-group-item">
+                <h4>{{ job.job_title }} - {{ job.organization_name }}</h4>
+                <p>{{ job.job_description }}</p>
+                <a href="{% url 'apply_for_job' job.id %}" class="btn btn-primary">Apply</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}
