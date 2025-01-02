@@ -25,25 +25,17 @@ class JobAdvertForm(forms.ModelForm):
 class RecruitmentInquiryForm(forms.ModelForm):
     class Meta:
         model = RecruitmentInquiry
-        fields = [
-            'first_name', 'last_name', 'email', 'mobile_phone',
-            'organization_name', 'title', 'help_message'
-        ]
-        widgets = {
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'mobile_phone': forms.TextInput(attrs={'class': 'form-control'}),
-            'organization_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'help_message': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
-        }
+        fields = ['first_name', 'last_name', 'email', 'mobile_phone', 'organization_name', 'title', 'help_message']
 class JobForm(forms.ModelForm):
     class Meta:
         model = Job
         fields = ['job_title', 'organization_name', 'job_description', 'location']
 
+# forms.py
+from django import forms
+from .models import JobApplication
+
 class JobApplicationForm(forms.ModelForm):
     class Meta:
         model = JobApplication
-        fields = ['full_name', 'id_no_or_passport', 'age', 'cv', 'id_copy', 'reason_for_consideration']
+        fields = ['job', 'full_name', 'id_no_or_passport', 'age', 'cv', 'id_copy', 'reason_for_consideration']

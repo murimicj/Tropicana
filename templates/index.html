@@ -38,7 +38,7 @@
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@tropicanamultiline.com</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 712345678</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
@@ -56,8 +56,8 @@
         <a href="{% url 'index' %}" class="logo d-flex align-items-center">
 
 
-          <h1 class="sitename">Tropicana</h1>
-{#            <img class="logo" src="{% static 'assets/img/Tropicana Coloured png.png' %}" alt="">#}
+{#          <h1 class="sitename">Tropicana</h1>#}
+            <img class="logo" src="{% static 'assets/img/trop.jpg' %}" alt="">
 
 {#            <img src="{% static 'assets/img/Tropicana Coloured png.png' %}" alt="">#}
         </a>
@@ -68,11 +68,11 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
 {#              <li><a href="#services">REGISTRATION</a></li>#}
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
+{#            <li><a href="#portfolio">Portfolio</a></li>#}
+{#            <li><a href="#team">Team</a></li>#}
             <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="{% url 'admin_login' %}">Admin</a></li>
+                <li><a href="{% url 'admin_dashboard' %}">Admin</a></li>
                 <li class="dropdown"><a href="#"><span>Forms</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="{% url 'job_advert_form' %}">Job advertisement</a></li>
@@ -600,380 +600,380 @@
 
     </section><!-- /Testimonials Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p><span>Check Our&nbsp;</span> <span class="description-title">Portfolio</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-1.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-1.jpg' %}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-2.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-2.jpg' %}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-3.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-3.jpg' %}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-4.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-4.jpg' %}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-5.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-5.jpg' %}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-6.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-6.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-7.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-7.jpg' %}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-9.jpg' %}" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-9.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Team Section -->
-    <section id="team" class="team section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p><span>Our Hardworking</span> <span class="description-title">Team</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p><span>Check our</span> <span class="description-title">Pricing</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-3">
-
-          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Job Advert</h3>
-              <h4><sup>$</sup>10<span> / month</span></h4>
-              <ul>
-                <li>Reliable advertisement</li>
-                <li></li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <h3>Recruitment</h3>
-              <h4><sup>$</sup>19<span> / person</span></h4>
-              <ul>
-                <li>Mass recruitment</li>
-                <li>Qualified personel</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="pricing-item">
-              <h3>Freight</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="pricing-item">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>F.A.Q</h2>
-        <p><span>Frequently Asked</span> <span class="description-title">Questions</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>What industries or job roles do you specialize in?</h3>
-                <div class="faq-content">
-                  <p>We work with a wide range of industries, including [list key industries your company serves, e.g., IT, healthcare, finance, manufacturing]. Our expertise spans entry-level roles to executive positions, ensuring we can meet the diverse needs of employers and candidates.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>. How do you ensure you find the right candidate for a role?</h3>
-                <div class="faq-content">
-                  <p>We follow a detailed recruitment process that includes understanding the employer’s requirements, sourcing candidates through various channels, conducting thorough interviews, and assessing skills, experience, and cultural fit. Our goal is to ensure that every placement aligns with both the candidate’s aspirations and the company’s objectives.
-                  </p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Do you offer temporary staffing or contract roles?</h3>
-                <div class="faq-content">
-                  <p>Yes, we provide flexible staffing solutions, including temporary, contract, and permanent placements. Whether you need short-term support for a project or long-term hires, we can help meet your workforce needs.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>How long does the recruitment process take?</h3>
-                <div class="faq-content">
-                  <p>The timeline depends on the complexity of the role, the industry, and specific client requirements. For standard roles, it typically takes [mention average timeframe, e.g., 2-4 weeks]. However, specialized or executive roles may require additional time for sourcing and vetting.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>What happens if a candidate doesn’t work out after placement?</h3>
-                <div class="faq-content">
-                  <p>We stand by the quality of our placements. In such cases, we offer replacement guarantees as outlined in our agreement. We work closely with you to understand the issue and find a suitable replacement at no additional cost within the agreed timeframe.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>How do you keep up with trends and changes in the job market?</h3>
-                <div class="faq-content">
-                  <p>Our team continuously monitors market trends, industry demands, and workforce shifts. We use data-driven insights and feedback from clients and candidates to adapt our strategies and stay ahead in the competitive job market.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
+{#    <!-- Portfolio Section -->#}
+{#    <section id="portfolio" class="portfolio section">#}
+{##}
+{#      <!-- Section Title -->#}
+{#      <div class="container section-title" data-aos="fade-up">#}
+{#        <h2>Portfolio</h2>#}
+{#        <p><span>Check Our&nbsp;</span> <span class="description-title">Portfolio</span></p>#}
+{#      </div><!-- End Section Title -->#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">#}
+{##}
+{#          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">#}
+{#            <li data-filter="*" class="filter-active">All</li>#}
+{#            <li data-filter=".filter-app">App</li>#}
+{#            <li data-filter=".filter-product">Card</li>#}
+{#            <li data-filter=".filter-branding">Web</li>#}
+{#          </ul><!-- End Portfolio Filters -->#}
+{##}
+{#          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-1.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>App 1</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-1.jpg' %}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-2.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Product 1</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-2.jpg' %}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-3.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Branding 1</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-3.jpg' %}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-4.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>App 2</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-4.jpg' %}" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-5.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Product 2</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-5.jpg' %}" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-6.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Branding 2</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-6.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-7.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>App 3</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-7.jpg' %}" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">#}
+{#              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Product 3</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">#}
+{#              <img src="{% static 'assets/img/masonry-portfolio/masonry-portfolio-9.jpg' %}" class="img-fluid" alt="">#}
+{#              <div class="portfolio-info">#}
+{#                <h4>Branding 3</h4>#}
+{#                <p>Lorem ipsum, dolor sit</p>#}
+{#                <a href="{% static 'assets/img/masonry-portfolio/masonry-portfolio-9.jpg' %}" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>#}
+{#                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>#}
+{#              </div>#}
+{#            </div><!-- End Portfolio Item -->#}
+{##}
+{#          </div><!-- End Portfolio Container -->#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{##}
+{#    </section><!-- /Portfolio Section -->#}
+{##}
+{#    <!-- Team Section -->#}
+{#    <section id="team" class="team section light-background">#}
+{##}
+{#      <!-- Section Title -->#}
+{#      <div class="container section-title" data-aos="fade-up">#}
+{#        <h2>Team</h2>#}
+{#        <p><span>Our Hardworking</span> <span class="description-title">Team</span></p>#}
+{#      </div><!-- End Section Title -->#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <div class="row gy-4">#}
+{##}
+{#          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">#}
+{#            <div class="team-member">#}
+{#              <div class="member-img">#}
+{#                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="">#}
+{#                <div class="social">#}
+{#                  <a href=""><i class="bi bi-twitter-x"></i></a>#}
+{#                  <a href=""><i class="bi bi-facebook"></i></a>#}
+{#                  <a href=""><i class="bi bi-instagram"></i></a>#}
+{#                  <a href=""><i class="bi bi-linkedin"></i></a>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="member-info">#}
+{#                <h4>Walter White</h4>#}
+{#                <span>Chief Executive Officer</span>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Team Member -->#}
+{##}
+{#          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">#}
+{#            <div class="team-member">#}
+{#              <div class="member-img">#}
+{#                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="">#}
+{#                <div class="social">#}
+{#                  <a href=""><i class="bi bi-twitter-x"></i></a>#}
+{#                  <a href=""><i class="bi bi-facebook"></i></a>#}
+{#                  <a href=""><i class="bi bi-instagram"></i></a>#}
+{#                  <a href=""><i class="bi bi-linkedin"></i></a>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="member-info">#}
+{#                <h4>Sarah Jhonson</h4>#}
+{#                <span>Product Manager</span>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Team Member -->#}
+{##}
+{#          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">#}
+{#            <div class="team-member">#}
+{#              <div class="member-img">#}
+{#                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="">#}
+{#                <div class="social">#}
+{#                  <a href=""><i class="bi bi-twitter-x"></i></a>#}
+{#                  <a href=""><i class="bi bi-facebook"></i></a>#}
+{#                  <a href=""><i class="bi bi-instagram"></i></a>#}
+{#                  <a href=""><i class="bi bi-linkedin"></i></a>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="member-info">#}
+{#                <h4>William Anderson</h4>#}
+{#                <span>CTO</span>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Team Member -->#}
+{##}
+{#          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">#}
+{#            <div class="team-member">#}
+{#              <div class="member-img">#}
+{#                <img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="">#}
+{#                <div class="social">#}
+{#                  <a href=""><i class="bi bi-twitter-x"></i></a>#}
+{#                  <a href=""><i class="bi bi-facebook"></i></a>#}
+{#                  <a href=""><i class="bi bi-instagram"></i></a>#}
+{#                  <a href=""><i class="bi bi-linkedin"></i></a>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="member-info">#}
+{#                <h4>Amanda Jepson</h4>#}
+{#                <span>Accountant</span>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Team Member -->#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{##}
+{#    </section><!-- /Team Section -->#}
+{##}
+{#    <!-- Pricing Section -->#}
+{#    <section id="pricing" class="pricing section">#}
+{##}
+{#      <!-- Section Title -->#}
+{#      <div class="container section-title" data-aos="fade-up">#}
+{#        <h2>Pricing</h2>#}
+{#        <p><span>Check our</span> <span class="description-title">Pricing</span></p>#}
+{#      </div><!-- End Section Title -->#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <div class="row gy-3">#}
+{##}
+{#          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="100">#}
+{#            <div class="pricing-item">#}
+{#              <h3>Job Advert</h3>#}
+{#              <h4><sup>$</sup>10<span> / month</span></h4>#}
+{#              <ul>#}
+{#                <li>Reliable advertisement</li>#}
+{#                <li></li>#}
+{#                <li>Nulla at volutpat dola</li>#}
+{#                <li class="na">Pharetra massa</li>#}
+{#                <li class="na">Massa ultricies mi</li>#}
+{#              </ul>#}
+{#              <div class="btn-wrap">#}
+{#                <a href="#" class="btn-buy">Buy Now</a>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Pricing Item -->#}
+{##}
+{#          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="200">#}
+{#            <div class="pricing-item featured">#}
+{#              <h3>Recruitment</h3>#}
+{#              <h4><sup>$</sup>19<span> / person</span></h4>#}
+{#              <ul>#}
+{#                <li>Mass recruitment</li>#}
+{#                <li>Qualified personel</li>#}
+{#                <li>Nulla at volutpat dola</li>#}
+{#                <li>Pharetra massa</li>#}
+{#                <li class="na">Massa ultricies mi</li>#}
+{#              </ul>#}
+{#              <div class="btn-wrap">#}
+{#                <a href="#" class="btn-buy">Buy Now</a>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Pricing Item -->#}
+{##}
+{#          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">#}
+{#            <div class="pricing-item">#}
+{#              <h3>Freight</h3>#}
+{#              <h4><sup>$</sup>29<span> / month</span></h4>#}
+{#              <ul>#}
+{#                <li>Aida dere</li>#}
+{#                <li>Nec feugiat nisl</li>#}
+{#                <li>Nulla at volutpat dola</li>#}
+{#                <li>Pharetra massa</li>#}
+{#                <li>Massa ultricies mi</li>#}
+{#              </ul>#}
+{#              <div class="btn-wrap">#}
+{#                <a href="#" class="btn-buy">Buy Now</a>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Pricing Item -->#}
+{##}
+{#          <div class="col-xl-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">#}
+{#            <div class="pricing-item">#}
+{#              <span class="advanced">Advanced</span>#}
+{#              <h3>Ultimate</h3>#}
+{#              <h4><sup>$</sup>49<span> / month</span></h4>#}
+{#              <ul>#}
+{#                <li>Aida dere</li>#}
+{#                <li>Nec feugiat nisl</li>#}
+{#                <li>Nulla at volutpat dola</li>#}
+{#                <li>Pharetra massa</li>#}
+{#                <li>Massa ultricies mi</li>#}
+{#              </ul>#}
+{#              <div class="btn-wrap">#}
+{#                <a href="#" class="btn-buy">Buy Now</a>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div><!-- End Pricing Item -->#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{##}
+{#    </section><!-- /Pricing Section -->#}
+{##}
+{#    <!-- Faq Section -->#}
+{#    <section id="faq" class="faq section light-background">#}
+{##}
+{#      <!-- Section Title -->#}
+{#      <div class="container section-title" data-aos="fade-up">#}
+{#        <h2>F.A.Q</h2>#}
+{#        <p><span>Frequently Asked</span> <span class="description-title">Questions</span></p>#}
+{#      </div><!-- End Section Title -->#}
+{##}
+{#      <div class="container">#}
+{##}
+{#        <div class="row justify-content-center">#}
+{##}
+{#          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">#}
+{##}
+{#            <div class="faq-container">#}
+{##}
+{#              <div class="faq-item faq-active">#}
+{#                <h3>What industries or job roles do you specialize in?</h3>#}
+{#                <div class="faq-content">#}
+{#                  <p>We work with a wide range of industries, including [list key industries your company serves, e.g., IT, healthcare, finance, manufacturing]. Our expertise spans entry-level roles to executive positions, ensuring we can meet the diverse needs of employers and candidates.</p>#}
+{#                </div>#}
+{#                <i class="faq-toggle bi bi-chevron-right"></i>#}
+{#              </div><!-- End Faq item-->#}
+{##}
+{#              <div class="faq-item">#}
+{#                <h3>. How do you ensure you find the right candidate for a role?</h3>#}
+{#                <div class="faq-content">#}
+{#                  <p>We follow a detailed recruitment process that includes understanding the employer’s requirements, sourcing candidates through various channels, conducting thorough interviews, and assessing skills, experience, and cultural fit. Our goal is to ensure that every placement aligns with both the candidate’s aspirations and the company’s objectives.#}
+{#                  </p>#}
+{#                </div>#}
+{#                <i class="faq-toggle bi bi-chevron-right"></i>#}
+{#              </div><!-- End Faq item-->#}
+{##}
+{#              <div class="faq-item">#}
+{#                <h3>Do you offer temporary staffing or contract roles?</h3>#}
+{#                <div class="faq-content">#}
+{#                  <p>Yes, we provide flexible staffing solutions, including temporary, contract, and permanent placements. Whether you need short-term support for a project or long-term hires, we can help meet your workforce needs.</p>#}
+{#                </div>#}
+{#                <i class="faq-toggle bi bi-chevron-right"></i>#}
+{#              </div><!-- End Faq item-->#}
+{##}
+{#              <div class="faq-item">#}
+{#                <h3>How long does the recruitment process take?</h3>#}
+{#                <div class="faq-content">#}
+{#                  <p>The timeline depends on the complexity of the role, the industry, and specific client requirements. For standard roles, it typically takes [mention average timeframe, e.g., 2-4 weeks]. However, specialized or executive roles may require additional time for sourcing and vetting.</p>#}
+{#                </div>#}
+{#                <i class="faq-toggle bi bi-chevron-right"></i>#}
+{#              </div><!-- End Faq item-->#}
+{##}
+{#              <div class="faq-item">#}
+{#                <h3>What happens if a candidate doesn’t work out after placement?</h3>#}
+{#                <div class="faq-content">#}
+{#                  <p>We stand by the quality of our placements. In such cases, we offer replacement guarantees as outlined in our agreement. We work closely with you to understand the issue and find a suitable replacement at no additional cost within the agreed timeframe.</p>#}
+{#                </div>#}
+{#                <i class="faq-toggle bi bi-chevron-right"></i>#}
+{#              </div><!-- End Faq item-->#}
+{##}
+{#              <div class="faq-item">#}
+{#                <h3>How do you keep up with trends and changes in the job market?</h3>#}
+{#                <div class="faq-content">#}
+{#                  <p>Our team continuously monitors market trends, industry demands, and workforce shifts. We use data-driven insights and feedback from clients and candidates to adapt our strategies and stay ahead in the competitive job market.</p>#}
+{#                </div>#}
+{#                <i class="faq-toggle bi bi-chevron-right"></i>#}
+{#              </div><!-- End Faq item-->#}
+{##}
+{#            </div>#}
+{##}
+{#          </div><!-- End Faq Column-->#}
+{##}
+{#        </div>#}
+{##}
+{#      </div>#}
+{##}
+{#    </section><!-- /Faq Section -->#}
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1092,7 +1092,8 @@
             <p>P.O BOX</p>
             <p>Nairobi, Kenya</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+254 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p><strong>Email:</strong> <span>info@tropicanamultiline.com</span></p>
+               <p><strong>ICT:</strong> <span>ictsupport@tropicanamultiline.com</span></p>
           </div>
         </div>
 

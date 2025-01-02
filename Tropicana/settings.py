@@ -80,9 +80,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'tropicana',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Mathioya536',
         'HOST': '127.0.0.1',
         'PORT': '3306',
+        'OPTIONS': {
+            'charset': 'utf8mb4',  # Recommended charset for MySQL 8.0 and above
+        },
 
     }
 }

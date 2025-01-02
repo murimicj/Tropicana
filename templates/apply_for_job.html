@@ -45,30 +45,55 @@
                 <h2 class="text-center" style="color: #106eea;">Apply for Job</h2>
                 <form method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
+
+                    <!-- Display form errors if there are any -->
+                    {% if form.errors %}
+                        <div class="alert alert-danger">
+                            <strong>There were some errors in your form submission:</strong>
+                            <ul>
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    <!-- Hidden field for job ID to associate the application with the job -->
+                    <input type="hidden" name="job" value="{{ job.id }}">
+
                     <div class="mb-3">
                         <label for="full_name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="full_name" name="full_name" required>
+                        <input type="text" class="form-control" id="full_name" name="full_name" value="{{ form.full_name.value }}" required>
                     </div>
+
                     <div class="mb-3">
                         <label for="id_number" class="form-label">ID Number/Passport Number</label>
-                        <input type="text" class="form-control" id="id_number" name="id_number" required>
+                        <input type="text" class="form-control" id="id_number" name="id_no_or_passport" value="{{ form.id_no_or_passport.value }}" required>
                     </div>
+
                     <div class="mb-3">
                         <label for="cv" class="form-label">Upload CV</label>
                         <input type="file" class="form-control" id="cv" name="cv" required>
                     </div>
+
                     <div class="mb-3">
                         <label for="identification_document" class="form-label">Upload ID/Identification Document</label>
-                        <input type="file" class="form-control" id="identification_document" name="identification_document" required>
+                        <input type="file" class="form-control" id="identification_document" name="id_copy" required>
                     </div>
+
                     <div class="mb-3">
                         <label for="age" class="form-label">Age</label>
-                        <input type="number" class="form-control" id="age" name="age" required>
+                        <input type="number" class="form-control" id="age" name="age" value="{{ form.age.value }}" required>
                     </div>
+
                     <div class="mb-3">
                         <label for="reason" class="form-label">Why should you be considered for this role?</label>
-                        <textarea class="form-control" id="reason" name="reason" rows="4" required></textarea>
+                        <textarea class="form-control" id="reason" name="reason_for_consideration" rows="4" required>{{ form.reason_for_consideration.value }}</textarea>
                     </div>
+
+                    <!-- Button to submit the application -->
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary w-100">Submit Application</button>
                     </div>
@@ -79,6 +104,8 @@
 </div>
 
 <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
 </body>
 </html>
 

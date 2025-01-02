@@ -48,104 +48,115 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="page-header">Psychometric Tests In Kenya</h1>
+ <div class="container">
+    <h1 class="page-header">Psychometric Tests In Kenya</h1>
 
-        <!-- Content Section -->
-        <div class="content-section">
-            <p>Are you looking to improve your recruitment and hiring process? Have you identified suitable candidates for a job but want to ensure that you are making the right decision? Psychometric tests are the way to go.</p>
-            <p>When used correctly, they can be a big determinant of prospective employee suitability for a placement.</p>
-            <p>On a monthly basis, we assist over 35 employers to apply our internationally recognised psychometric tests in Kenya with great results.</p>
+    <!-- Content Section -->
+    <div class="content-section">
+        <p>Are you looking to improve your recruitment and hiring process? Have you identified suitable candidates for a job but want to ensure that you are making the right decision? Psychometric tests are the way to go.</p>
+        <p>When used correctly, they can be a big determinant of prospective employee suitability for a placement.</p>
+        <p>On a monthly basis, we assist over 35 employers to apply our internationally recognised psychometric tests in Kenya with great results.</p>
 
-            <h4>Why Do You Need The Psychometric Test?</h4>
-            <ul>
-                <li>They are objective and impersonal, allowing contenders to be compared in expertise terms without unconscious bias.</li>
-                <li>They help to make the recruiting process more efficient and can represent substantial HR costs.</li>
-                <li>You will only hire applicants suitable for the position.</li>
-                <li>They are proven to be reliable indicators of future work performance.</li>
-            </ul>
+        <h4>Why Do You Need The Psychometric Test?</h4>
+        <ul>
+            <li>They are objective and impersonal, allowing contenders to be compared in expertise terms without unconscious bias.</li>
+            <li>They help to make the recruiting process more efficient and can represent substantial HR costs.</li>
+            <li>You will only hire applicants suitable for the position.</li>
+            <li>They are proven to be reliable indicators of future work performance.</li>
+        </ul>
 
-            <h4>Types of Psychometric Assessments</h4>
-            <p>There are essentially three types: aptitude, skills, and personality. Let’s examine each in turn:</p>
-            <ol>
-                <li><strong>Aptitude Tests:</strong> Assess specific or general competency, including numerical, verbal, and logical skills.</li>
-                <li><strong>Skills Tests:</strong> Evaluate how quickly one can learn a new ability for the roles they are applying for.</li>
-                <li><strong>Personality Assessments:</strong> Assess suitability based on behavior, leadership, and communication mastery.</li>
-            </ol>
+        <h4>Types of Psychometric Assessments</h4>
+        <p>There are essentially three types: aptitude, skills, and personality. Let’s examine each in turn:</p>
+        <ol>
+            <li><strong>Aptitude Tests:</strong> Assess specific or general competency, including numerical, verbal, and logical skills.</li>
+            <li><strong>Skills Tests:</strong> Evaluate how quickly one can learn a new ability for the roles they are applying for.</li>
+            <li><strong>Personality Assessments:</strong> Assess suitability based on behavior, leadership, and communication mastery.</li>
+        </ol>
 
-            <h4>The Tests We Provide:</h4>
-            <ul>
-                <li>Aptitude</li>
-                <li>Numerical</li>
-                <li>Leadership</li>
-                <li>Sales Ability</li>
-                <li>Managerial</li>
-                <li>Supervisory</li>
-                <li>Critical Thinking</li>
-                <li>Inductive Reasoning</li>
-                <li>General Personality and Behavior Valuation</li>
-            </ul>
+        <h4>The Tests We Provide:</h4>
+        <ul>
+            <li>Aptitude</li>
+            <li>Numerical</li>
+            <li>Leadership</li>
+            <li>Sales Ability</li>
+            <li>Managerial</li>
+            <li>Supervisory</li>
+            <li>Critical Thinking</li>
+            <li>Inductive Reasoning</li>
+            <li>General Personality and Behavior Valuation</li>
+        </ul>
 
-            <h4>Why Corporate Staffing Services?</h4>
-            <p>Our assessments are internationally accredited. We partner with leading global providers of psychometric analysis to ensure you get the latest tests. Additionally, we are a leading HR consultancy firm recruiting for top organizations.</p>
-            <p>We have consulted for notable clients such as:</p>
-            <p>AAR Insurance, UN Women, Honda, Hass Consult, Safaricom Investment Sacco, Nivea, Weetabix, Monarch Insurance, Davis & Shirtliff, Rafiki DTM, Car & General, etc.</p>
+        <h4>Why Corporate Staffing Services?</h4>
+        <p>Our assessments are internationally accredited. We partner with leading global providers of psychometric analysis to ensure you get the latest tests. Additionally, we are a leading HR consultancy firm recruiting for top organizations.</p>
+        <p>We have consulted for notable clients such as:</p>
+        <p>AAR Insurance, UN Women, Honda, Hass Consult, Safaricom Investment Sacco, Nivea, Weetabix, Monarch Insurance, Davis & Shirtliff, Rafiki DTM, Car & General, etc.</p>
 
-            <h4>Next Step?</h4>
-            <p>Fill in your details below to get in touch. Remember to include your phone number and indicate if you'd prefer a one-on-one or virtual meeting. We guarantee a prompt response!</p>
-        </div>
+        <h4>Next Step?</h4>
+        <p>Fill in your details below to get in touch. Remember to include your phone number and indicate if you'd prefer a one-on-one or virtual meeting. We guarantee a prompt response!</p>
+    </div>
 
-        <!-- Form Section -->
-        <div class="form-section">
-            {% if messages %}
-    <div class="container mt-3">
-        {% for message in messages %}
+    <!-- Form Section -->
+    <div class="form-section">
+        {% if messages %}
+        <div class="container mt-3">
+            {% for message in messages %}
             <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
                 {{ message }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        {% endfor %}
-    </div>
-{% endif %}
-
-            <form method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="first_name">First Name *</label>
-                    <input type="text" id="first_name" name="first_name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="last_name">Last Name *</label>
-                    <input type="text" id="last_name" name="last_name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Mobile Phone *</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="organization">Organization Name *</label>
-                    <input type="text" id="organization" name="organization" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="title">Your Title *</label>
-                    <input type="text" id="title" name="title" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="help">Briefly, How Can We Be Of Help? *</label>
-                    <textarea id="help" name="help" class="form-control" rows="4" required></textarea>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary w-100">Submit</button>
-                </div>
-            </form>
+            {% endfor %}
         </div>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="first_name">First Name *</label>
+                <input type="text" id="first_name" name="first_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Last Name *</label>
+                <input type="text" id="last_name" name="last_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Mobile Phone *</label>
+                <input type="tel" id="phone" name="mobile_phone" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="organization">Organization Name *</label>
+                <input type="text" id="organization" name="organization_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Your Title *</label>
+                <input type="text" id="title" name="title" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="help">Briefly, How Can We Be Of Help? *</label>
+                <textarea id="help" name="help_message" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </div>
+        </form>
     </div>
-    <!-- Link to your locally downloaded Bootstrap JS file -->
-    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</div>
+
+<!-- Link to your locally downloaded Bootstrap JS file -->
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+
 </body>
 </html>
 

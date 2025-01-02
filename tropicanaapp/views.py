@@ -94,25 +94,39 @@ def job_advert_form(request):
         form = JobAdvertForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('success')  # Replace 'success' with your success URL
+            return redirect('index')  # Replace 'success' with your success URL
     else:
         form = JobAdvertForm()
     return render(request, 'job_advert_form.html', {'form': form})
 
 
 def recruitment_view(request):
+    # Check if the form is being submitted via POST
     if request.method == 'POST':
+        # Instantiate the form with POST data
         form = RecruitmentInquiryForm(request.POST)
+
+        # Check if the form is valid
         if form.is_valid():
+            # Save the form data to the database
             form.save()
+
+            # Display a success message
             messages.success(request, "Your details have been submitted successfully!")
-            return redirect('recruitment_thank_you')  # Redirect to a thank you page
+
+            # Redirect to a thank you page after successful submission
+            return redirect('recruitment_thank_you')  # Ensure this is a valid URL pattern name in your urls.py
+
     else:
+        # If the request is GET, create an empty form
         form = RecruitmentInquiryForm()
 
+    # Render the form in the recruitment.html template
     return render(request, 'recruitment.html', {'form': form})
 
+
 def thank_you_view(request):
+    # Simply render the thank you page after a successful submission
     return render(request, 'recruitment_thank_you.html')
 
 # views.py
@@ -144,15 +158,24 @@ def job_list(request):
     return render(request, 'job_list.html', {'jobs': jobs})
 
 def apply_for_job(request, job_id):
-    job = Job.objects.get(id=job_id)
+    try:
+        job = Job.objects.get(id=job_id)
+    except Job.DoesNotExist:
+        messages.error(request, "Job not found.")
+        return redirect('job_list')
+
     if request.method == 'POST':
         form = JobApplicationForm(request.POST, request.FILES)
         if form.is_valid():
             application = form.save(commit=False)
-            application.job = job  # Link application to specific job
+            application.job = job  # Link application to the specific job
             application.save()
             messages.success(request, "Your application has been submitted successfully!")
-            return redirect('job_list')  # Redirect to job listing after successful submission
+            return redirect('job_list')  # Redirect to the job listing after successful submission
+        else:
+            # Print form errors for debugging
+            print(form.errors)  # This will show validation errors for troubleshooting
+            messages.error(request, "There were some errors in your submission.")
     else:
         form = JobApplicationForm()
 

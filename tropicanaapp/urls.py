@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from tropicanaapp import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('service/', views.service, name='service'),
     path('starter/', views.starter, name='starter'),
@@ -34,4 +34,7 @@ urlpatterns = [
     path('post-job/', views.post_job, name='post_job'),  # Admin can post new jobs
     path('jobs/', views.job_list, name='job_list'),  # Users can view jobs
     path('jobs/<int:job_id>/apply/', views.apply_for_job, name='apply_for_job'),  # Users apply for jobs
+    path('apply/<int:job_id>/', views.apply_for_job, name='apply_for_job'),
+
 ]
+
